@@ -10,7 +10,7 @@
   <!-- Date adapter for Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
 
-  <style>
+  <style> 
     body { font-family: Arial, sans-serif; background: #f5f7fb; margin:0; padding:20px; }
     .container { max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
     h1 { text-align:center; }
@@ -177,7 +177,33 @@ fileInput.addEventListener('change',(ev)=>{
   reader.readAsText(file);
 });
 weightInput.addEventListener('keydown',(e)=>{if(e.key==='Enter') saveBtn.click();});
+// RESET DATA FEATURE
+const resetBtn = document.getElementById('resetBtn');
+const confirmPanel = document.getElementById('confirmPanel');
+const confirmReset = document.getElementById('confirmReset');
+const cancelReset = document.getElementById('cancelReset');
+
+// Show confirm panel
+resetBtn.addEventListener('click', () => {
+  confirmPanel.style.display = 'block';
+});
+
+// Cancel reset
+cancelReset.addEventListener('click', () => {
+  confirmPanel.style.display = 'none';
+});
+
+// Confirm reset
+confirmReset.addEventListener('click', () => {
+  localStorage.removeItem(STORAGE_KEY);
+  entries = [];
+  render();
+
+  confirmPanel.style.display = 'none';
+});
+  
 </script>
 </body>
 </html>
+
 
