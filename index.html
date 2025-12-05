@@ -47,6 +47,21 @@
   <div style="margin-top:10px; display:flex; gap:10px;">
     <button id="exportBtn">Export CSV</button>
     <button id="importBtn">Import CSV</button>
+    <div style="margin-top:10px;">
+      <button id="resetBtn" style="background:#b73535;">Reset Data</button>
+    </div>
+
+    <!-- Confirmation panel (hidden by default) -->
+    <div id="confirmPanel" 
+         style="display:none; margin-top:15px; padding:15px; 
+            border:1px solid #ccc; border-radius:10px; background:#fff0f0;">
+      <div style="margin-bottom:10px; font-weight:bold;">
+        Delete ALL data? This cannot be undone.
+      </div>
+    <button id="confirmReset" style="background:#b73535; margin-right:10px;">Confirm</button>
+    <button id="cancelReset">Cancel</button>
+  </div>
+  
     <input id="fileInput" type="file" accept="text/csv" style="display:none">
   </div>
 </div>
@@ -165,3 +180,4 @@ weightInput.addEventListener('keydown',(e)=>{if(e.key==='Enter') saveBtn.click()
 </script>
 </body>
 </html>
+
