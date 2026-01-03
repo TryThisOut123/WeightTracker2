@@ -38,6 +38,7 @@
   <div class="filters">
     <button class="filter active" data-filter="week">Week</button>
     <button class="filter" data-filter="month">1Mo</button>
+    <button class="filter" data-filter="2month">2Mo</button>
     <button class="filter" data-filter="ytd">YTD</button>
     <button class="filter" data-filter="lastyear">Last Year</button>
     <button class="filter" data-filter="all">All Time</button>
@@ -136,6 +137,7 @@ function getFilteredEntries(filter){
   if(filter==='all') return entries;
   if(filter==='week'){ const start = new Date(); start.setDate(now.getDate()-6); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='month'){ const start = new Date(); start.setMonth(now.getMonth()-1); return entries.filter(e=>new Date(e.date)>=start); }
+  if(filter==='2month'){ const start = new Date(); start.set2Month(now.get2Month()-2); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='ytd'){ const start = new Date(now.getFullYear(),0,1); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='lastyear'){ const start = new Date(); start.setFullYear(now.getFullYear()-1); return entries.filter(e=>new Date(e.date)>=start); }
   return entries;
@@ -205,6 +207,7 @@ confirmReset.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
