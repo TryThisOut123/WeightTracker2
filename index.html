@@ -137,7 +137,7 @@ function getFilteredEntries(filter){
   if(filter==='all') return entries;
   if(filter==='week'){ const start = new Date(); start.setDate(now.getDate()-6); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='month'){ const start = new Date(); start.setMonth(now.getMonth()-1); return entries.filter(e=>new Date(e.date)>=start); }
-  if(filter==='2month'){ const start = new Date(); start.set2Month(now.get2Month()-2); return entries.filter(e=>new Date(e.date)>=start); }
+  if(filter==='2month'){ const start = new Date(); start.setMonth(now.getMonth()-2); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='ytd'){ const start = new Date(now.getFullYear(),0,1); return entries.filter(e=>new Date(e.date)>=start); }
   if(filter==='lastyear'){ const start = new Date(); start.setFullYear(now.getFullYear()-1); return entries.filter(e=>new Date(e.date)>=start); }
   return entries;
@@ -207,6 +207,7 @@ confirmReset.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
