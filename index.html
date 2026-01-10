@@ -10,8 +10,11 @@
   <!-- Date adapter for Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
 
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%2390EE90'/><text x='90' y='75' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='black' text-anchor='middle'>RS</text><text x='90' y='135' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='black' text-anchor='middle'>WT</text></svg>">
-  <link rel="manifest" href='data:application/manifest+json,{"name":"Richard Tracker","short_name":"RS WT","icons":[{"src":"data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 180 180\"><rect width=\"180\" height=\"180\" fill=\"%2390EE90\"/><text x=\"90\" y=\"75\" font-family=\"Arial\" font-size=\"60\" font-weight=\"bold\" fill=\"white\" text-anchor=\"middle\">RS</text><text x=\"90\" y=\"135\" font-family=\"Arial\" font-size=\"60\" font-weight=\"bold\" fill=\"black\" text-anchor=\"middle\">WT</text></svg>","sizes":"180x180","type":"image/svg+xml"}],"display":"standalone","background_color":"#90EE90"}'>
+  <!-- Apple touch icon: light blue background (#ADD8E6) and red letter (#FF0000) -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%23ADD8E6'/><text x='90' y='120' font-family='Arial, Helvetica, sans-serif' font-size='90' text-anchor='middle' fill='%23FF0000'>R</text></svg>">
+
+  <!-- Manifest (same SVG embedded) -->
+  <link rel="manifest" href='data:application/manifest+json,{"name":"Richard Tracker","short_name":"RS WT","icons":[{"src":"data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 180 180\"><rect width=\"180\" height=\"180\" fill=\"%23ADD8E6\"/><text x=\"90\" y=\"120\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"90\" text-anchor=\"middle\" fill=\"%23FF0000\">R</text></svg>","sizes":"180x180","type":"image/svg+xml"}]}' />
   
   <style> 
     body { font-family: Arial, sans-serif; background: #f5f7fb; margin:0; padding:20px; }
@@ -210,6 +213,7 @@ confirmReset.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
